@@ -21,6 +21,7 @@ public:
 protected:
 	bool render();
 	void depthPass();
+	void shadowPass();
 	void finalPass();
 	void gui();
 
@@ -33,7 +34,13 @@ private:
 	ShadowShader* shadowShader;
 	DepthShader* depthShader;
 
+	OrthoMesh* orthomesh;
+	CubeMesh* cuberMesh;
+	SphereMesh* sphereMesh;
+
 	ShadowMap* shadowMap;
+	RenderTexture* shadowTexture;
+	
 };
 
 #endif
